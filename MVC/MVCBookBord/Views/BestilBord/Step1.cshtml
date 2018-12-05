@@ -1,0 +1,48 @@
+﻿@model List<MVCBookBord.Models.Table>
+
+@{
+    ViewBag.Title = "Step1";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/jquery.datetimepicker.css" rel="stylesheet" />
+
+<div class="Step1MainTop">
+    <div class="col-md-6">
+        <h2>Bord reservation</h2>
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+        <div class="input-wrapper">
+            <input class="form-control" type="text" id="datetimepicker" />
+            <label for="stuff" class="fa fa-calendar input-icon"></label>
+        </div><br /><br />
+                    <select class="form-control" id="sel1">
+                        @foreach (var tab in ViewData["tables"] as List<MVCBookBord.Models.Table>)
+                        {
+                            <option> Bord: @tab.Id - @tab.Seats pladser </option>
+                        }
+
+
+
+
+
+                    </select>
+
+
+    </div>
+    <div class="col-md-6">
+        <img src="~/Content/img/Table-Plan.jpg" />
+    </div>
+
+</div>
+<hr />
+<div class="Step1MainBottom">
+    <div class="col-md-12">
+        <a class="btn-custom btn-success" href="Step2">Næste</a>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.datetimepicker.full.js"></script>
+<script>
+    $("#datetimepicker").datetimepicker();
+</script>

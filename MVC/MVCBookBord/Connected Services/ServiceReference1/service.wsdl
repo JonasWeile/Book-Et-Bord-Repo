@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BookingService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBookingService_GetAllTables_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTables" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_GetAllTables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_GetAllFreeTables_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFreeTables" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_GetAllFreeTables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFreeTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_GetAllReservedTables_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReservedTables" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_GetAllReservedTables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllReservedTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_CreateTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTable" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_CreateTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_UpdateTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTable" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_UpdateTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_DeleteTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTable" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_DeleteTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_GetAllFood_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFood" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_GetAllFood_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFoodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_CreateFood_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFood" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_CreateFood_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFoodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_UpdateFood_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFood" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_UpdateFood_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFoodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_DeleteFood_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFood" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_DeleteFood_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFoodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_GetAllBeverages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBeverages" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_GetAllBeverages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBeveragesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_CreateBeverage_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBeverage" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_CreateBeverage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBeverageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_UpdateBeverage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBeverage" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_UpdateBeverage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBeverageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_DeleteBeverage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBeverage" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_DeleteBeverage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBeverageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBookingService">
+    <wsdl:operation name="GetAllTables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/GetAllTables" message="tns:IBookingService_GetAllTables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/GetAllTablesResponse" message="tns:IBookingService_GetAllTables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFreeTables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/GetAllFreeTables" message="tns:IBookingService_GetAllFreeTables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/GetAllFreeTablesResponse" message="tns:IBookingService_GetAllFreeTables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservedTables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/GetAllReservedTables" message="tns:IBookingService_GetAllReservedTables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/GetAllReservedTablesResponse" message="tns:IBookingService_GetAllReservedTables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/CreateTable" message="tns:IBookingService_CreateTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/CreateTableResponse" message="tns:IBookingService_CreateTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/UpdateTable" message="tns:IBookingService_UpdateTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/UpdateTableResponse" message="tns:IBookingService_UpdateTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/DeleteTable" message="tns:IBookingService_DeleteTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/DeleteTableResponse" message="tns:IBookingService_DeleteTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFood">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/GetAllFood" message="tns:IBookingService_GetAllFood_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/GetAllFoodResponse" message="tns:IBookingService_GetAllFood_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFood">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/CreateFood" message="tns:IBookingService_CreateFood_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/CreateFoodResponse" message="tns:IBookingService_CreateFood_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFood">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/UpdateFood" message="tns:IBookingService_UpdateFood_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/UpdateFoodResponse" message="tns:IBookingService_UpdateFood_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFood">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/DeleteFood" message="tns:IBookingService_DeleteFood_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/DeleteFoodResponse" message="tns:IBookingService_DeleteFood_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBeverages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/GetAllBeverages" message="tns:IBookingService_GetAllBeverages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/GetAllBeveragesResponse" message="tns:IBookingService_GetAllBeverages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBeverage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/CreateBeverage" message="tns:IBookingService_CreateBeverage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/CreateBeverageResponse" message="tns:IBookingService_CreateBeverage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBeverage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/UpdateBeverage" message="tns:IBookingService_UpdateBeverage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/UpdateBeverageResponse" message="tns:IBookingService_UpdateBeverage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBeverage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/DeleteBeverage" message="tns:IBookingService_DeleteBeverage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/DeleteBeverageResponse" message="tns:IBookingService_DeleteBeverage_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBookingService" type="tns:IBookingService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllTables">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/GetAllTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFreeTables">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/GetAllFreeTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllReservedTables">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/GetAllReservedTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTable">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/CreateTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTable">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/UpdateTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTable">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/DeleteTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFood">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/GetAllFood" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFood">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/CreateFood" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFood">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/UpdateFood" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFood">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/DeleteFood" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBeverages">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/GetAllBeverages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBeverage">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/CreateBeverage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBeverage">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/UpdateBeverage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBeverage">
+      <soap:operation soapAction="http://tempuri.org/IBookingService/DeleteBeverage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BookingService">
+    <wsdl:port name="BasicHttpBinding_IBookingService" binding="tns:BasicHttpBinding_IBookingService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/BookEtBordService/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

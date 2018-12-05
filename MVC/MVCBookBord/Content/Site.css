@@ -1,0 +1,71 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.test {
+    text-align:center;
+    padding:100px;
+}
+
+.Step1MainTop {
+    margin-top: 50px;
+    min-height:420px;
+}
+
+    .Step1MainTop img {
+        max-width:100%;
+
+    }
+
+
+.input-icon {
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 0.5em); /* Keep icon in center of input, regardless of the input height */
+}
+
+input {
+    padding: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+#datetimepicker {
+    padding-left: 25px !important;
+}
+
+.Step1MainBottom {
+    float:right;
+    height:100px;
+    width:100%;
+}
+
+.btn-custom {
+    padding:15px 25px 15px 25px;
+    float:right;
+}
+
+    
